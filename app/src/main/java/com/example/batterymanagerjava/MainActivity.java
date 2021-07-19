@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, String.valueOf(temperature/10)+" Degree Celcius", Toast.LENGTH_SHORT).show();
+                    Toast toast = Toast.makeText(MainActivity.this, String.valueOf(temperature/10)+" Degree Celcius", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.TOP,10,600);
+                    toast.show();
                 }
             });
 
